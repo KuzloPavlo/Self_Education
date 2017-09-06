@@ -1,19 +1,18 @@
 #include <Windows.h>
 #include <iostream>
 #include <sstream>
-//#include <exception>
 #include <fstream>
 
 int main(int argc, char* argv[])
 {
     try
     {
-        // if (argc != 2)
-             //throw std::runtime_error("Wrong parameters count");
+        if (argc != 2)
+            throw std::runtime_error("\nApplication: program_name <file_name>");
 
-        std::ifstream in(/*"text.txt"*/"CertUtilTest.exe"/*argv[2]*/, std::ios::in | std::ios::binary);
+        std::ifstream in(argv[1], std::ios::in | std::ios::binary);
         if (!in)
-            throw std::runtime_error("Can't open file " + std::string(argv[2]));
+            throw std::runtime_error("Can't open file " + std::string(argv[1]));
 
         int fileSize = 0;
         in.seekg(0, in.end);
@@ -24,23 +23,41 @@ int main(int argc, char* argv[])
             throw std::runtime_error("File too small.");
 
         _IMAGE_DOS_HEADER dosHeader;
-
         char* p = reinterpret_cast<char*>(&dosHeader);
         in.read(p, sizeof(dosHeader));
 
-        int MZWord = 23117;
-        if (MZWord != dosHeader.e_magic)
+        if (IMAGE_DOS_SIGNATURE != dosHeader.e_magic) // check MZ
             throw std::runtime_error("This is not PE format.");
 
-        in.seekg(dosHeader.e_lfanew, in.beg); // move pointer to PE header
+        in.seekg(dosHeader.e_lfanew, in.beg); // move inside file pointer to PE header
 
         _IMAGE_NT_HEADERS NTHeader;
         p = reinterpret_cast<char*>(&NTHeader);
         in.read(p, sizeof(NTHeader));
 
-        p;
+        if (IMAGE_NT_SIGNATURE != NTHeader.Signature) // check PE
+            throw std::runtime_error("Can't find Signature.");
 
+        std::cout << "NumberOfSections " << NTHeader.FileHeader.NumberOfSections << std::endl;
 
+        IMAGE_SECTION_HEADER sectionHeader;
+        p = reinterpret_cast<char*>(&sectionHeader);
+
+        for (int i = 0; i < NTHeader.FileHeader.NumberOfSections; ++i)
+        {
+            in.read(p, sizeof(sectionHeader));
+
+            std::stringstream ss;
+            ss
+                << "Section name: " << sectionHeader.Name << std::endl
+                << "Virtual Size: " << std::hex << sectionHeader.Misc.VirtualSize << std::endl
+                << "Virtual Address: " << std::hex << sectionHeader.VirtualAddress << std::endl
+                << "Raw Size: " << std::hex << sectionHeader.SizeOfRawData << std::endl
+                << "Raw Address: " << std::hex << sectionHeader.PointerToRawData << std::endl
+                << std::endl;
+
+            std::cout << ss.str();
+        }
     }
     catch (std::exception& ex)
     {
