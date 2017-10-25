@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Profiling", "Profiling\Prof
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PE_Viewer", "PE_Viewer\PE_Viewer.vcxproj", "{6A64A0E2-96EB-436C-A6B3-6B9E0CFF9A44}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CBCEncryptionDencryption", "CBCEncryptionDencryption\CBCEncryptionDencryption.vcxproj", "{0924154B-C159-4E5E-B789-B3618D94B0CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -37,6 +39,14 @@ Global
 		{6A64A0E2-96EB-436C-A6B3-6B9E0CFF9A44}.Release|Win32.Build.0 = Release|Win32
 		{6A64A0E2-96EB-436C-A6B3-6B9E0CFF9A44}.Release|x64.ActiveCfg = Release|x64
 		{6A64A0E2-96EB-436C-A6B3-6B9E0CFF9A44}.Release|x64.Build.0 = Release|x64
+		{0924154B-C159-4E5E-B789-B3618D94B0CB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0924154B-C159-4E5E-B789-B3618D94B0CB}.Debug|Win32.Build.0 = Debug|Win32
+		{0924154B-C159-4E5E-B789-B3618D94B0CB}.Debug|x64.ActiveCfg = Debug|x64
+		{0924154B-C159-4E5E-B789-B3618D94B0CB}.Debug|x64.Build.0 = Debug|x64
+		{0924154B-C159-4E5E-B789-B3618D94B0CB}.Release|Win32.ActiveCfg = Release|Win32
+		{0924154B-C159-4E5E-B789-B3618D94B0CB}.Release|Win32.Build.0 = Release|Win32
+		{0924154B-C159-4E5E-B789-B3618D94B0CB}.Release|x64.ActiveCfg = Release|x64
+		{0924154B-C159-4E5E-B789-B3618D94B0CB}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
