@@ -1,0 +1,305 @@
+cmake --build . --config Release
+cmake --build .
+cmake ..\example_1\ -DCMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION='10.0.18362.0'
+
+////////////////////////////////////////////////////////////////////////////////////
+-- Configuring incomplete, errors occurred!
+See also "Z:/Sources/Self_Education/Learn_CMake/example_1/CMakeFiles/CMakeOutput.log".
+See also "Z:/Sources/Self_Education/Learn_CMake/example_1/CMakeFiles/CMakeError.log".
+
+Z:\Sources\Self_Education\Learn_CMake\example_1>cmake
+Usage
+
+  cmake [options] <path-to-source>
+  cmake [options] <path-to-existing-build>
+  cmake [options] -S <path-to-source> -B <path-to-build>
+
+Specify a source directory to (re-)generate a build system for it in the
+current working directory.  Specify an existing build directory to
+re-generate its build system.
+
+Run 'cmake --help' for more information.
+
+
+Z:\Sources\Self_Education\Learn_CMake\example_1>cmake -DCMAKE_SYSTEM_VERSION=10.0.18362.0
+CMake Warning:
+  No source or binary directory provided.  Both will be assumed to be the
+  same as the current working directory, but note that this warning will
+  become a fatal error in future CMake releases.
+
+
+CMake Warning (dev) in CMakeLists.txt:
+  No project() command is present.  The top-level CMakeLists.txt file must
+  contain a literal, direct call to the project() command.  Add a line of
+  code such as
+
+    project(ProjectName)
+
+  near the top of the file, but after cmake_minimum_required().
+
+  CMake is pretending there is a "project(Project)" command on the first
+  line.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Selecting Windows SDK version 8.1 to target Windows 6.3.9600.
+^C
+Z:\Sources\Self_Education\Learn_CMake\example_1>cmake ..
+CMake Error: The source directory "Z:/Sources/Self_Education/Learn_CMake" does not appear to contain CMakeLists.txt.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+Z:\Sources\Self_Education\Learn_CMake\example_1>cmake .
+CMake Warning (dev) in CMakeLists.txt:
+  No project() command is present.  The top-level CMakeLists.txt file must
+  contain a literal, direct call to the project() command.  Add a line of
+  code such as
+
+    project(ProjectName)
+
+  near the top of the file, but after cmake_minimum_required().
+
+  CMake is pretending there is a "project(Project)" command on the first
+  line.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Selecting Windows SDK version 8.1 to target Windows 6.3.9600.
+^C
+Z:\Sources\Self_Education\Learn_CMake\example_1>cd ..
+
+Z:\Sources\Self_Education\Learn_CMake>mkdir 11
+
+Z:\Sources\Self_Education\Learn_CMake>cd 11
+
+Z:\Sources\Self_Education\Learn_CMake\11>cmake ..\example_1\
+CMake Warning (dev) in CMakeLists.txt:
+  No project() command is present.  The top-level CMakeLists.txt file must
+  contain a literal, direct call to the project() command.  Add a line of
+  code such as
+
+    project(ProjectName)
+
+  near the top of the file, but after cmake_minimum_required().
+
+  CMake is pretending there is a "project(Project)" command on the first
+  line.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Selecting Windows SDK version 8.1 to target Windows 6.3.9600.
+^C
+Z:\Sources\Self_Education\Learn_CMake\11>cmake ..\example_1\
+
+Z:\Sources\Self_Education\Learn_CMake\11>cd ..
+
+Z:\Sources\Self_Education\Learn_CMake>mkdir 22
+
+Z:\Sources\Self_Education\Learn_CMake>cd 22
+
+Z:\Sources\Self_Education\Learn_CMake\22>cmake ..\example_1\ -DCMAKE_SYSTEM_VERSION=10
+CMake Warning (dev) in CMakeLists.txt:
+  No project() command is present.  The top-level CMakeLists.txt file must
+  contain a literal, direct call to the project() command.  Add a line of
+  code such as
+
+    project(ProjectName)
+
+  near the top of the file, but after cmake_minimum_required().
+
+  CMake is pretending there is a "project(Project)" command on the first
+  line.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Selecting Windows SDK version 8.1 to target Windows 6.3.9600.
+-- The C compiler identification is unknown
+-- The CXX compiler identification is unknown
+CMake Error in CMakeLists.txt:
+  No CMAKE_C_COMPILER could be found.
+
+
+
+CMake Error in CMakeLists.txt:
+  No CMAKE_CXX_COMPILER could be found.
+
+
+
+-- Configuring incomplete, errors occurred!
+See also "Z:/Sources/Self_Education/Learn_CMake/example_1/CMakeFiles/CMakeOutput.log".
+See also "Z:/Sources/Self_Education/Learn_CMake/example_1/CMakeFiles/CMakeError.log".
+
+Z:\Sources\Self_Education\Learn_CMake\22>cd ..
+
+Z:\Sources\Self_Education\Learn_CMake>mkdir 33
+
+Z:\Sources\Self_Education\Learn_CMake>cd 33
+
+Z:\Sources\Self_Education\Learn_CMake\33>cmake ..\example_1\ CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION='10.0.18362.0'
+CMake Error: The source directory "Z:/Sources/Self_Education/Learn_CMake/33/CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION='10.0.18362.0'" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+Z:\Sources\Self_Education\Learn_CMake\33>cmake ..\example_1\ -DCMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION='10.0.18362.0'
+CMake Warning (dev) in CMakeLists.txt:
+  No project() command is present.  The top-level CMakeLists.txt file must
+  contain a literal, direct call to the project() command.  Add a line of
+  code such as
+
+    project(ProjectName)
+
+  near the top of the file, but after cmake_minimum_required().
+
+  CMake is pretending there is a "project(Project)" command on the first
+  line.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Selecting Windows SDK version 8.1 to target Windows 6.3.9600.
+-- The C compiler identification is unknown
+-- The CXX compiler identification is unknown
+CMake Error in CMakeLists.txt:
+  No CMAKE_C_COMPILER could be found.
+
+
+
+CMake Error in CMakeLists.txt:
+  No CMAKE_CXX_COMPILER could be found.
+
+
+
+-- Configuring incomplete, errors occurred!
+See also "Z:/Sources/Self_Education/Learn_CMake/example_1/CMakeFiles/CMakeOutput.log".
+See also "Z:/Sources/Self_Education/Learn_CMake/example_1/CMakeFiles/CMakeError.log".
+
+Z:\Sources\Self_Education\Learn_CMake\33>cmake ..\example_1\ -DCMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION='10.0.18362.0'
+CMake Warning (dev) in CMakeLists.txt:
+  No project() command is present.  The top-level CMakeLists.txt file must
+  contain a literal, direct call to the project() command.  Add a line of
+  code such as
+
+    project(ProjectName)
+
+  near the top of the file, but after cmake_minimum_required().
+
+  CMake is pretending there is a "project(Project)" command on the first
+  line.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Selecting Windows SDK version 10.0.18362.0 to target Windows 6.3.9600.
+-- The C compiler identification is MSVC 19.22.27905.0
+-- The CXX compiler identification is MSVC 19.22.27905.0
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC/14.22.27905/bin/Hostx64/x64/cl.exe
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC/14.22.27905/bin/Hostx64/x64/cl.exe -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC/14.22.27905/bin/Hostx64/x64/cl.exe
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC/14.22.27905/bin/Hostx64/x64/cl.exe -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: Z:/Sources/Self_Education/Learn_CMake/example_1
+
+Z:\Sources\Self_Education\Learn_CMake\33>cmake ..\example_1\
+-- Building for: Visual Studio 16 2019
+CMake Warning (dev) in CMakeLists.txt:
+  No project() command is present.  The top-level CMakeLists.txt file must
+  contain a literal, direct call to the project() command.  Add a line of
+  code such as
+
+    project(ProjectName)
+
+  near the top of the file, but after cmake_minimum_required().
+
+  CMake is pretending there is a "project(Project)" command on the first
+  line.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Selecting Windows SDK version 10.0.18362.0 to target Windows 6.3.9600.
+-- The C compiler identification is MSVC 19.22.27905.0
+-- The CXX compiler identification is MSVC 19.22.27905.0
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC/14.22.27905/bin/Hostx64/x64/cl.exe
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC/14.22.27905/bin/Hostx64/x64/cl.exe -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC/14.22.27905/bin/Hostx64/x64/cl.exe
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC/14.22.27905/bin/Hostx64/x64/cl.exe -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: Z:/Sources/Self_Education/Learn_CMake/33
+
+Z:\Sources\Self_Education\Learn_CMake\33>cmake --build .
+Microsoft (R) Build Engine version 16.2.37902+b5aaefc9f for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Checking Build System
+  Building Custom Rule Z:/Sources/Self_Education/Learn_CMake/example_1/CMakeLists.txt
+  main.cpp
+  main.vcxproj -> Z:\Sources\Self_Education\Learn_CMake\33\Debug\main.exe
+  Building Custom Rule Z:/Sources/Self_Education/Learn_CMake/example_1/CMakeLists.txt
+
+Z:\Sources\Self_Education\Learn_CMake\33>cmake --build
+Usage: cmake --build <dir> [options] [-- [native-options]]
+Options:
+  <dir>          = Project binary directory to be built.
+  --parallel [<jobs>], -j [<jobs>]
+                 = Build in parallel using the given number of jobs.
+                   If <jobs> is omitted the native build tool's
+                   default number is used.
+                   The CMAKE_BUILD_PARALLEL_LEVEL environment variable
+                   specifies a default parallel level when this option
+                   is not given.
+  --target <tgt>..., -t <tgt>...
+                 = Build <tgt> instead of default targets.
+  --config <cfg> = For multi-configuration tools, choose <cfg>.
+  --clean-first  = Build target 'clean' first, then build.
+                   (To clean only, use --target 'clean'.)
+  --verbose, -v  = Enable verbose output - if supported - including
+                   the build commands to be executed.
+  --             = Pass remaining options to the native tool.
+
+Z:\Sources\Self_Education\Learn_CMake\33>cmake --build --config=Release
+Error: Z:/Sources/Self_Education/Learn_CMake/33/--config=Release is not a directory
+
+Z:\Sources\Self_Education\Learn_CMake\33>cmake --build
+Usage: cmake --build <dir> [options] [-- [native-options]]
+Options:
+  <dir>          = Project binary directory to be built.
+  --parallel [<jobs>], -j [<jobs>]
+                 = Build in parallel using the given number of jobs.
+                   If <jobs> is omitted the native build tool's
+                   default number is used.
+                   The CMAKE_BUILD_PARALLEL_LEVEL environment variable
+                   specifies a default parallel level when this option
+                   is not given.
+  --target <tgt>..., -t <tgt>...
+                 = Build <tgt> instead of default targets.
+  --config <cfg> = For multi-configuration tools, choose <cfg>.
+  --clean-first  = Build target 'clean' first, then build.
+                   (To clean only, use --target 'clean'.)
+  --verbose, -v  = Enable verbose output - if supported - including
+                   the build commands to be executed.
+  --             = Pass remaining options to the native tool.
+
+Z:\Sources\Self_Education\Learn_CMake\33>cmake --build . --config
+Microsoft (R) Build Engine version 16.2.37902+b5aaefc9f for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  main.vcxproj -> Z:\Sources\Self_Education\Learn_CMake\33\Debug\main.exe
+Attempting to cancel the build...
+^C
+Z:\Sources\Self_Education\Learn_CMake\33>cmake --build . --config Release
+Microsoft (R) Build Engine version 16.2.37902+b5aaefc9f for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Checking Build System
+  Building Custom Rule Z:/Sources/Self_Education/Learn_CMake/example_1/CMakeLists.txt
+  main.cpp
+  main.vcxproj -> Z:\Sources\Self_Education\Learn_CMake\33\Release\main.exe
+  Building Custom Rule Z:/Sources/Self_Education/Learn_CMake/example_1/CMakeLists.txt
+
+Z:\Sources\Self_Education\Learn_CMake\33>cmake --build . --config Release
